@@ -1,0 +1,16 @@
+@import "../../../styles/variables"
+
+.buttonComponent
+  background: $c-button-submit
+  box-sizing: border-box
+  border-radius: $radius-input
+  color: $c-white
+  font-size: 16px
+  padding: 0 16px
+  height: $height-input
+  cursor: pointer
+  &:hover
+    background: $c-button-submit-hover
+
+.buttonComponent.disabled
+  cursor: not-allowed

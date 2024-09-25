@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul[class], ol[class] {
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "SF Pro Display", sans-serif;
+  color: #282828;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+*, body, h1, h2, h3, h4,
+p, ul[class], ol[class],
+li, ul, figure, figcaption,
+blockquote, dl, dd, span {
+  margin: 0;
+  font-family: "SF Pro Display", sans-serif;
+  font-style: normal;
+  color: #282828;
+  line-height: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  animation-duration: 0.01ms;
+  animation-iteration-count: 1;
+  transition-duration: 0.01ms;
+  scroll-behavior: auto;
+}
+
+button {
+  background-color: unset;
+  border: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+#root .main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+#root .main .mainBody {
+  background-color: #ffffff;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+}
+#root .main .mainBody .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 89%;
+  padding: 2.5rem 0;
+  padding-top: 104px;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 200;
+  margin-bottom: 1.4rem;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.input {
+  min-height: 48px;
+}
+
+.search-section {
+  position: fixed;
+  top: 276px;
+  background-color: #ffffff;
+  z-index: 1000;
+  width: 100%;
+  max-width: 89%;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.search-section .search-form {
+  display: flex;
+  gap: 8px;
+  max-width: 510px;
+  margin: 0 auto;
+}
+.search-section.searched {
+  top: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+  transform: translateY(0);
+}
+.search-section.searched .search-form {
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  margin: 40px 0 16px 0;
+}
+
+.images {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 8px;
+  margin-top: 16px;
+}
+.images .image-container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.images .image-container .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+.images .image-container .image:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.spinner-cont {
+  padding-top: 86px;
+}
+
+.error-msg {
+  padding-top: 1.6rem;
+  color: #787878;
+}
+
+.locked-scroll {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 925px) {
+  #root .main .mainBody .container {
+    max-width: 92%;
+  }
+  .search-section {
+    max-width: 92%;
+  }
+  .images {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+@media only screen and (max-width: 506px) {
+  #root .main .mainBody .container {
+    padding-top: 84px;
+  }
+  .search-section.searched .search-form {
+    margin-top: 20px;
+  }
+  .images {
+    grid-template-columns: repeat(auto-fill, minmax(114px, 1fr));
+  }
+  .spinner-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 389px) {
+  .images {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 5px;
+  }
+}/*# sourceMappingURL=App.css.map */

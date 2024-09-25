@@ -1,0 +1,42 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+  font-size: 16px;
+}
+.input .label-text {
+  margin-right: 5px;
+  font-size: 16px;
+}
+.input .input-container {
+  position: relative;
+}
+.input .input-container .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input .input-container .icon.left {
+  left: 12px;
+}
+.input .input-container .icon.right {
+  right: 12px;
+}
+.input .input-container .icon.clear-icon {
+  cursor: pointer;
+}
+.input.with-icon .inputComponent {
+  padding-left: 35px;
+}
+.input .inputComponent {
+  width: 100%;
+  min-height: 48px;
+  padding-inline: 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #eff0f0;
+}
+.input .inputComponent:focus {
+  background-color: #E6E6E6;
+}/*# sourceMappingURL=styles.css.map */

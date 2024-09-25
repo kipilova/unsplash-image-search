@@ -1,0 +1,17 @@
+.buttonComponent {
+  background: #EB0C0C;
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0 16px;
+  height: 48px;
+  cursor: pointer;
+}
+.buttonComponent:hover {
+  background: #C30000;
+}
+
+.buttonComponent.disabled {
+  cursor: not-allowed;
+}/*# sourceMappingURL=styles.css.map */
